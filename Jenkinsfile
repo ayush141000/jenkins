@@ -1,6 +1,7 @@
 pipeline {
     agent any 
-        stages ('basic test') {
+        stages  {
+            stage('basic test') {
             steps {
                 sh '''
                 echo "hello Champ"
@@ -9,6 +10,7 @@ pipeline {
                 '''
             }
         }
+    }
 
 
 }
