@@ -6,6 +6,7 @@ pipeline {
                 echo "hello Champ"
                 gcloud version
                 echo "Welcome to GCP"
+                '''
             }
         }
 
