@@ -4,6 +4,11 @@ pipeline {
         
             
             stage('basic test') {
+                agent {
+                    docker{
+                        image 'google/cloud-sdk'
+                    }
+                }
 
             
             steps {
