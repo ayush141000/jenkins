@@ -6,7 +6,8 @@ pipeline {
             stage('basic test') {
                 agent {
                     docker{
-                        image 'google/cloud-sdk'
+                        image 'google/cloud-sdk:latest'
+                        args '-u 1000:1000'
                     }
                 }
 
