@@ -17,10 +17,10 @@ pipeline {
                     // Make sure to replace 'gcp-service-account-key' with your actual credential ID
                     // The 'GOOGLE_APPLICATION_CREDENTIALS' environment variable is automatically set by Jenkins.
                     // This variable points to a temporary file containing the JSON key.
-                    googleServiceAccountKey('gcp-service-account-key')
-                    //file(credentialsId: 'gcp-service-account-key', variable: 'GCLOUD_CREDS')
+                    //googleServiceAccountKey('gcp-service-account-key')
+                    file(credentialsId: 'gcp-service-account-key', variable: 'GCLOUD_CREDS')
                     ]) {
-                    sh 'gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS'
+                    sh 'gcloud auth activate-service-account --key-file=$GCLOUD_CREDS'
                     // You can also set a default project if you haven't already
                     //sh 'gcloud config set project YOUR_PROJECT_ID' // Replace YOUR_PROJECT_ID
                     
