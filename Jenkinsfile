@@ -22,11 +22,8 @@ pipeline {
                     // You can also set a default project if you haven't already
                     //sh 'gcloud config set project YOUR_PROJECT_ID' // Replace YOUR_PROJECT_ID
                     sh 'gcloud compute zones list'
-                }
-            }
-
             
-                steps {
+            
                     sh '''
                     echo "hello Champ"
                     gcloud version
@@ -34,6 +31,7 @@ pipeline {
                     echo "Welcome to GCP"
                     '''
                 }
+            }
 
         }
     }
