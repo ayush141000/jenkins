@@ -22,7 +22,7 @@ pipeline {
                     ]) {
                     sh 'gcloud auth activate-service-account --key-file=$GCLOUD_CREDS'
                     // You can also set a default project if you haven't already
-                    //sh 'gcloud config set project YOUR_PROJECT_ID' // Replace YOUR_PROJECT_ID
+                    sh 'gcloud config set project sublime-triode-391519' // Replace YOUR_PROJECT_ID
                     
             
             
