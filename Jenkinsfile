@@ -29,7 +29,7 @@ pipeline {
                     sh '''
                     echo "hello Champ"
                     gcloud version
-                    gcloud compute zones list
+                    gcloud info
                     echo "Welcome to GCP"
                     '''
                 }
